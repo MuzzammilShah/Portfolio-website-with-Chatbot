@@ -1,0 +1,233 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thank you
+    - thanks! good bye
+    - thank you, see you later!
+    - thanks! bye
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - I am good
+    - im good
+    - good
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - not bad
+    - not great
+    - not good
+    - bad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you trained?
+    - is this a chatbot?
+    - who are you?
+    - what are you
+    - what is this
+    - who is this?
+    - who is your creator?
+    - who created you?
+    - what are you made of?
+    - who made you?
+    - how were you developed?
+
+
+- intent: ask_about_me
+  examples: |
+    - Tell me about yourself
+    - tell me about yourself
+    - Tell me about you
+    - tell me about you
+    - Introduce yourself
+    - introduce yourself
+    - Who are you?
+    - who are you?
+    - Whats your name?
+    - whats your name
+    - What do you do?
+    - Tell me more about you
+    - Who is the AI engineer?
+  
+- intent: ask_work_experience
+  examples: |
+    - Can you share your work experience?
+    - Tell me about your professional background
+    - What companies have you worked for?
+    - Where did you intern?
+    - What projects have you worked on?
+
+- intent: ask_certifications
+  examples: |
+    - Tell me about your certifications
+    - What certifications do you have?
+    - What skills do you have from certifications?
+    - Which courses have you completed?
+    - Do you have any certifications in AI?
+
+- intent: ask_roles_responsibilities
+  examples: |
+    - What were your roles in previous organizations?
+    - Can you tell me about your leadership roles?
+    - What responsibilities did you have at TEDxMVJCE?
+    - What were your duties as the VP of Saahitya?
+    - Did you lead any teams?
+    - Have you shown any leadership?
+    - Have you taken part in any extra curricular activities?
+    - Have you taken part in cultural events?
+    - Tell me about your club activities
+
+- intent: ask_education
+  examples: |
+    - Can you tell me about your education?
+    - What degree do you hold?
+    - Where did you study?
+    - Tell me about your academic background
+    - What were your grades in college?
+
+
+- intent: ask_projects
+  examples: |
+    - What all projects have you done
+    - What projects have you done?
+    - List ot your projects
+    - Your projects
+    - Have you done any projects?
+    - Have you done any other projects?
+    - Can you list out the projects done by you
+
+
+- intent: ask_skills
+  examples: |
+    - What are your skills?
+    - List your skills
+    - Top 10 skills
+    - What are you good at?
+    - What do you think your strengths are?
+    - What are your strengths?
+
+
+- intent: ask_resume
+  examples: |
+    - View Resume
+    - Resume
+    - show resume
+    - download resume
+    - resume
+    - can you show me your resume
+    - Provide me your resume to download
+    - Download resume
+    - Resume download
+    - Can I see your resume
+
+- intent: ask_contact
+  examples: |
+    - Contact Me
+    - How can I contact you?
+    - Can we connect?
+    - Lets connect on LinkedIn
+    - How can I reach out to you?
+    - Contact details
+
+- intent: ask_give_options
+  examples: |
+    - What can you do?
+    - Show me the main menu
+    - What can i ask you about?
+    - What can you do?
+    - Can you show me some questions?
+    - What all can i ask you?
+    - What can you tell me?
+    - What can you show me?
+    - What can you do?
+
+- intent: ask_manual_follow_up
+  examples: |
+    - Would you like to know anything else?
+    - Would you like to ask something else?
+    - Show main menu
+    - Show me more
+    - Take me to the main menu
+    - Restart chat
+    - Restart
+    - restart
+    - Show Main Menu

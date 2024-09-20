@@ -1,0 +1,92 @@
+version: "3.1"
+
+stories:
+
+
+#==========================UNEXPECTED PATHS-QUESTIONS=============================#
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+
+#==========================END OF UNEXPECTED PATHS-QUESTIONS=============================#
+
+#==========================EXPECTED PATHS-QUESTIONS=============================#
+
+- story: About me
+  steps:
+    - intent: ask_about_me
+    - action: utter_about_me
+
+- story: Work experience
+  steps:
+    - intent: ask_work_experience
+    - action: utter_work_experience
+    - action: action_follow_up
+
+- story: Certifications - Yes
+  steps:
+    - intent: ask_certifications
+    - action: utter_certifications
+    - action: action_follow_up
+
+
+- story: Projects
+  steps:
+    - intent: ask_projects
+    - action: utter_projects
+    - action: action_follow_up
+
+
+- story: Skills
+  steps:
+    - intent: ask_skills
+    - action: utter_skills
+    - action: action_follow_up
+
+
+- story: Roles and Responsibilities
+  steps:
+    - intent: ask_roles_responsibilities
+    - action: utter_roles_responsibilities
+    - action: action_follow_up
+
+
+- story: Education
+  steps:
+    - intent: ask_education
+    - action: utter_education
+    - action: action_follow_up
+
+- story: Lets connect
+  steps:
+    - intent: ask_contact
+    - action: utter_contact
+    - action: action_follow_up
+
+- story: Download resume
+  steps:
+  - intent: ask_resume
+  - action: utter_resume
+  - action: action_follow_up
+
+- story: Giving user options
+  steps:
+  - intent: ask_give_options
+  - action: action_main_menu
+
+- story: User manually asks for options
+  steps:
+  - intent: ask_manual_follow_up
+  - action: action_main_menu
+
+#==========================END OF EXPECTED PATHS-QUESTIONS=============================#

@@ -1,0 +1,139 @@
+version: "3.1"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_about_me
+  - ask_resume
+  - ask_contact
+  - ask_work_experience
+  - ask_certifications
+  - ask_projects
+  - ask_skills
+  - ask_roles_responsibilities
+  - ask_education
+  - ask_give_options
+  - ask_manual_follow_up
+
+
+actions:
+  - action_hello_world
+  - action_main_menu
+  - action_follow_up
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.pinimg.com/originals/da/72/75/da72758f273c755c6f3ea6b983b294b7.jpg"
+
+  utter_happy:
+  - text: ":)"
+    image: "https://i.pinimg.com/originals/32/c6/db/32c6db68576a9535537cdc0ce82a3a1f.jpg"
+
+  utter_goodbye:
+  - text: "Thank you for chatting with me! If you have any more questions, feel free to restart the chat. Have a great day!"
+
+  utter_iamabot:
+  - text: "I am a bot, created by Muhammed Shah!"
+
+
+  utter_about_me:
+  - text: "I am Muhammed Shah, and my work focuses on bringing the practical applications of AI to life, such as this chatbot! \n\nHere are a few more things you can learn about me:"
+    buttons:
+    - title:  "Work Experience"
+      payload:  "/ask_work_experience"
+    - title:  "Roles of Responsibilities"
+      payload:  "/ask_roles_responsibilities"
+    - title:  "Certifications Obtained"
+      payload:  "/ask_certifications"
+    - title:  "My Projects"
+      payload:  "/ask_projects"
+    - title:  "My Resume"
+      payload:  "/ask_resume"
+    - title:  "Contact Me"
+      payload:  "/ask_contact"
+
+
+  utter_contact:
+  - text: "You can Connect and Contact me on LinkedIn!"
+    custom:
+      payload: pdf_attachment
+      title: "LinkedIn Profile"
+      url: "https://www.linkedin.com/in/muhammed-shah/"
+ 
+
+  utter_work_experience:
+  - text: "I am currently an Engineer Trainee at Potentiam Ltd and I previously worked at Wipro Technologies as an AI Intern.\n\nI have over 1.5 years of total work experience."
+    custom: 
+        payload: "collapsible"
+        data: 
+        - title: AI Engineer Trainee - Potentiam Ltd (Click to read more)
+          description: Collaborating closely with the Founder Director and Global CIO of our company, primarily focusing on AI-driven initiatives. My contributions span various aspects of project management, research and development, and stakeholder engagement.
+
+        - title: AI Intern - Wipro Technologies (Click to read more)
+          description: Focused on improving AI observability, Detecting Anomalies and Optimizing Capacity Forecasting. Also worked on developing and fine-tuning LLMs using LangChain, implementing a pilot Q&A system over documents.
+
+
+  utter_certifications:
+  - text: "I hold multiple certifications in Generative AI, Developing AI Applications, Large Language Models, and Chatbot Development from top institutions."
+    custom:
+      payload: pdf_attachment
+      title: "Licenses & Certifications"
+      url: "https://www.linkedin.com/in/muhammed-shah/details/certifications/"
+
+
+  utter_projects:
+  - text: "You can view all of my projects on my GitHub profile!"
+    custom:
+      payload: pdf_attachment
+      title: "GitHub Profile"
+      url: "https://github.com/MuzzammilShah?tab=repositories"
+
+
+  utter_skills:
+  - text: "I specialize in Machine Learning and chatbot development, with an intermediate proficiency in Python and Flask.\n\nI also possess strong skills in communication, project management, strategic planning and cybersecurity."
+
+
+  utter_roles_responsibilities:
+  - text: "I've held various responsibilities during college which include: Director of Design in TEDxMVJCE, Vice President and Head of Social Media for Saahitya Literature Club, and Delegate at Model United Nations."
+    custom:
+      payload: pdf_attachment
+      title: "Roles, Responsibilities & Leadership"
+      url: "https://www.linkedin.com/in/muhammed-shah/details/volunteering-experiences/"
+
+
+  utter_education:
+  - text: "My most recent qualification is a B.Tech degree in Computer Science and Engineering, with an overall CGPA of 9.32, placing me in the top 10 of my department.\n\n You can view all of my educational background here:"
+    custom:
+        payload: "collapsible"
+        data:
+        - title: MVJ College of Engineering, Bachelor of Engineering (Click to read more)
+          description:  Grade- 9.32 CGPA, Top 10 Rank Holder- Dept of CSE. 
+
+        - title: Primus PU College, PCMC (Click to read more)
+          description:  Grade- 86.5%
+
+        - title: St. Peter's School, I.C.S.E (Click to read more)
+          description:  Grade- 92.4%, Topper in Computer Science
+
+
+  utter_resume:
+  - text: "You can view my resume here:"
+    custom:
+      payload: pdf_attachment
+      title: "My Resume"
+      url: "https://drive.google.com/file/d/1TCtAlrFuNtsOF_5VAl7HjAlX86AT0_Pp/view?usp=drive_link"
