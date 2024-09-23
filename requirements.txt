@@ -1,5 +1,4 @@
-rasa==3.6.20
-Flask==3.0.3
+rasa
+Flask
 gunicorn
 Flask-Compress
-Flask-Talisman
