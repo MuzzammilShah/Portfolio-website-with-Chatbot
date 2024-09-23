@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Muhammed Shah Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="/static/img/profile.png">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/profile.png') }}">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,11 +49,11 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="static/css/materialize.min.css"
+      href="{{ url_for('static', filename='css/materialize.min.css') }}"
     />
 
     <!--Main css-->
-    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
@@ -75,7 +75,7 @@
                   <h3>I am a detail-oriented AI Engineer with a passion for developing innovative tools, systems, and processes that bring the practical application of AI to life.</h3>
                   <h6>My work focuses on delivering high-quality results, consistently improving efficiency, and driving impactful outcomes.</h6>
               </div>
-              <img src="static/img/profile-website.png" alt="GitHub Profile" class="profile-img">
+              <img src="{{ url_for('static', filename='img/profile-website.png') }}" alt="GitHub Profile" class="profile-img">
           </div>
       </section>
 
@@ -85,7 +85,7 @@
           <div class="work-experience-boxes">
               <div class="work-box">
                   <div class="work-box-content">
-                      <img src="static/img/company1-logo.png" alt="Wipro Logo" class="company-logo">
+                      <img src="{{ url_for('static', filename='img/company1-logo.png') }}" alt="Wipro Logo" class="company-logo">
                       <div class="work-box-text">
                           <h3>AI Intern</h3>
                           <h5>Wipro Technologies, Bangalore</h5>
@@ -97,7 +97,7 @@
 
               <div class="work-box">
                   <div class="work-box-content">
-                      <img src="static/img/company2-logo.png" alt="Potentiam Logo" class="company-logo">
+                      <img src="{{ url_for('static', filename='img/company2-logo.png') }}" alt="Potentiam Logo" class="company-logo">
                       <div class="work-box-text">
                           <h3>AI Engineer Trainee</h3>
                           <h5>Potentiam Ltd, Bangalore</h5>
@@ -179,18 +179,18 @@
               <!-- Certification card 1 -->
               <div class="card">
                   <div class="card-front">
-                      <img src="static/img/Certifications/DL-1.png" alt="Certification Image" class="cert-image">
+                      <img src="{{ url_for('static', filename='img/Certifications/DL-1.png') }}" alt="Certification Image" class="cert-image">
                   </div>
                   <div class="card-back">
                       <a href="https://www.coursera.org/account/accomplishments/verify/Z3YKCXBW265S?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
                           target="_blank" class="cert-link-btn">See Credential</a>
                   </div>
               </div>
-
+              
               <!-- Certification card 2 -->
               <div class="card">
                   <div class="card-front">
-                      <img src="static/img/Certifications/IBM.png" alt="Certification Image" class="cert-image">
+                      <img src="{{ url_for('static', filename='img/Certifications/IBM.png') }}" alt="Certification Image" class="cert-image">
                   </div>
                   <div class="card-back">
                       <a href="https://www.coursera.org/account/accomplishments/verify/WKU6UA8K5F86?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
@@ -201,7 +201,7 @@
               <!-- Certification card 3 -->
               <div class="card">
                   <div class="card-front">
-                      <img src="static/img/Certifications/MICROSOFT.png" alt="Certification Image" class="cert-image">
+                      <img src="{{ url_for('static', filename='img/Certifications/MICROSOFT.png') }}" alt="Certification Image" class="cert-image">
                   </div>
                   <div class="card-back">
                       <a href="https://www.linkedin.com/learning/certificates/35d5eef7288a9df12e9611b3870680b8faf2abf1c733ed15fffcba0079aa5c38?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BVXKSJ9F9S%2B2KTWvePCpkLw%3D%3D"
@@ -212,7 +212,7 @@
               <!-- Certification card 4 -->
               <div class="card">
                   <div class="card-front">
-                      <img src="static/img/Certifications/RASA.png" alt="Certification Image" class="cert-image">
+                      <img src="{{ url_for('static', filename='img/Certifications/RASA.png') }}" alt="Certification Image" class="cert-image">
                   </div>
                   <div class="card-back">
                       <a href="https://www.linkedin.com/in/muhammed-shah/details/certifications/1724159665717/single-media-viewer/?type=DOCUMENT&profileId=ACoAADWebncBEuTI9nZZLcTOPCu4Dy9N863oirg"
@@ -223,7 +223,7 @@
               <!-- Certification card 5 -->
               <div class="card">
                   <div class="card-front">
-                      <img src="static/img/Certifications/DL-2.png" alt="Certification Image" class="cert-image">
+                      <img src="{{ url_for('static', filename='img/Certifications/DL-2.png') }}" alt="Certification Image" class="cert-image">
                   </div>
                   <div class="card-back">
                       <a href="https://learn.deeplearning.ai/accomplishments/028806ec-6c30-4359-ae48-b2747f7a303a?usp=sharing"
@@ -234,7 +234,7 @@
               <!-- Certification card 6 -->
               <div class="card">
                   <div class="card-front">
-                      <img src="static/img/Certifications/DL-3.png" alt="Certification Image" class="cert-image">
+                      <img src="{{ url_for('static', filename='img/Certifications/DL-3.png') }}" alt="Certification Image" class="cert-image">
                   </div>
                   <div class="card-back">
                       <a href="https://learn.deeplearning.ai/accomplishments/e742ebb0-8239-4854-860b-eae7fd69774d?usp=sharing"
@@ -245,7 +245,7 @@
               <!-- Certification card 7 -->
               <div class="card">
                   <div class="card-front">
-                      <img src="static/img/Certifications/PREP-1.png" alt="Certification Image" class="cert-image">
+                      <img src="{{ url_for('static', filename='img/Certifications/PREP-1.png') }}" alt="Certification Image" class="cert-image">
                   </div>
                   <div class="card-back">
                       <a href="https://drive.google.com/file/d/1lvOsBCHH9wbNHlMwiD0N0N1dUseALo3K/view"
@@ -256,7 +256,7 @@
               <!-- Certification card 8 -->
               <div class="card">
                   <div class="card-front">
-                      <img src="static/img/Certifications/PREP-2.png" alt="Certification Image" class="cert-image">
+                      <img src="{{ url_for('static', filename='img/Certifications/PREP-2.png') }}" alt="Certification Image" class="cert-image">
                   </div>
                   <div class="card-back">
                       <a href="https://drive.google.com/file/d/1887UXv0iWaeDjqJ_WTr6YzAeqPdeyvno/view"
@@ -306,7 +306,7 @@
 
       <!--bot profile-->
       <div class="profile_div" id="profile_div">
-        <img class="imgProfile" src="static/img/profile.png" />
+        <img class="imgProfile" src="{{ url_for('static', filename='img/profile.png') }}" />
       </div>
 
       <div class="new-tap-target" id="bot-popup" data-target="profile_div">
@@ -323,14 +323,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
       type="text/javascript"
-      src="static/js/lib/materialize.min.js"
+      src="{{ url_for('static', filename='js/lib/materialize.min.js') }}"
     ></script>
-    <script src="static/js/lib/uuid.min.js"></script>
+    <script src="{{ url_for('static', filename='js/lib/uuid.min.js') }}"></script>
     <!--Main Script -->
-    <script type="text/javascript" src="static/js/script.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
 
     <!--Chart.js Script -->
-    <script type="text/javascript" src="static/js/lib/chart.min.js"></script>
-    <script type="text/javascript" src="static/js/lib/showdown.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/chart.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/showdown.min.js') }}"></script>
+      
   </body>
 </html>
