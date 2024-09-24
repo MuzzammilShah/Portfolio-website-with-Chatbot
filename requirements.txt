@@ -1,4 +1,3 @@
 rasa
 Flask
-gunicorn
-Flask-Compress
+Frozen-Flask

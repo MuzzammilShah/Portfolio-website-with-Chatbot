@@ -1,0 +1,978 @@
+/* ============= css related to chats =============== */
+
+.widget {
+  display: none;
+  width: 350px;
+  right: 15px;
+  height: 500px;
+  bottom: 5%;
+  position: fixed;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.514), 0 0px 10px 0 #00000096;
+  background-image: url('../img/widget-bg.png');
+  z-index: 999;
+}
+
+.chat_header {
+  height: 60px;
+  border-radius: 10px 10px 0px 0px;
+  padding: 5px;
+  font-size: 20px;
+  background-image: url('../img/header.png');
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between title and icons */
+}
+
+.chat_header_title {
+  color: white;
+  margin-right: auto; /* Push title to the left */
+  margin-left: 20px; /* Adjust this value for spacing */
+}
+
+.chats {
+  height: 385px;
+  padding: 2px;
+  border-radius: 1px;
+  overflow-y: scroll;
+  margin-top: 2px;
+  transition: 0.2s;
+}
+
+div.chats::-webkit-scrollbar {
+  overflow-y: hidden;
+  width: 0px;
+}
+
+.clearfix {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.botAvatar {
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  float: left;
+  margin-left: 5px;
+}
+
+.botMsg {
+  float: left;
+  margin-top: 5px;
+  background: #0000009a;
+  color: rgb(255, 255, 255);
+  margin-left: 0.5em;
+  padding: 10px;
+  border-radius: 1.5em;
+  max-width: 60%;
+  min-width: 25%;
+  font-size: 13px;
+  word-wrap: break-word;
+  border-radius: 0px 5px 5px 5px;
+  font-family: "Open Sans", sans-serif;
+}
+
+div.chats > pre {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  margin: 0 !important;
+  white-space: initial !important;
+}
+div.chats > ul:not(.browser-default) {
+  padding-left: 1em;
+}
+div.chats > ul:not(.browser-default) > li {
+  list-style-type: initial;
+}
+
+div.chats > span.botMsg > ol {
+  padding-left: 1em;
+}
+textarea {
+  box-shadow: none;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+}
+
+textarea::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+
+textarea-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.userMsg {
+  animation: animateElement linear 0.2s;
+  animation-iteration-count: 1;
+  margin-top: 5px;
+  word-wrap: break-word;
+  padding: 10px;
+  float: right;
+  margin-right: 0.5em;
+  background: #4d606183;
+  color: white;
+  margin-bottom: 0.15em;
+  font-size: 13px;
+  max-width: 65%;
+  min-width: 15%;
+  border-radius: 5px 0px 5px 5px;
+  font-family: "Open Sans", sans-serif;
+}
+
+blockquote {
+  margin: 20px 0;
+  padding-left: 1.5rem;
+  border-left: 5px solid #ee6e73;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+}
+
+.userAvatar {
+  animation: animateElement linear 0.3s;
+  animation-iteration-count: 1;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  float: right;
+  margin-right: 5px;
+}
+
+.usrInput {
+  margin-top: 1.4px;
+  padding: 0.5em;
+  width: 80%;
+  margin-left: 4%;
+  border: 0;
+  padding-left: 15px;
+  height: 40px;
+  color: #ffffff;
+}
+
+.usrInput::placeholder {
+  font-style: italic;
+}
+
+.keypad {
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 0px 0px 10px 10px;
+  border-top: 1px solid #e3e7ee;
+  background-image: url('../img/footer.png');
+}
+
+#sendButton {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  float: right;
+  margin-right: 15px;
+  text-align: center;
+  padding: 4px;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.784);
+}
+
+
+.imgProfile {
+  box-shadow: 
+    0 0 10px 2px #4d6061,  /* Inner black glow */
+    0 0 30px 20px black;  /* Outer green glow */
+  border-radius: 50px;
+  width: 60%;
+}
+
+.profile_div {
+  position: fixed;
+  padding: 5px;
+  width: 10%;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* css for dropdown menu of the bot */
+
+#close,
+#restart,
+#clear {
+  cursor: pointer;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+  color: white;
+  margin-right: 5px;
+  float: right;
+  margin-top: 3%;
+}
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+  color: #4d6061;
+}
+
+@keyframes animateElement {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+/* Added by me */
+
+.icon-action {
+  cursor: pointer;
+  color: white;
+  margin-left: 5px; /* Small space between icons */
+  margin-right: 5px;
+}
+
+.icon-action i {
+  font-size: 24px; /* Adjust icon size if needed */
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on icons */
+.icon-action:hover i {
+  color: #4d6061; /* Change to desired hover color */
+}
+
+
+/*========== css related to chats elements============= */
+
+div.content::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+div.content_data::-webkit-scrollbar {
+  overflow-y: hidden;
+  width: 0px;
+}
+
+
+/* css for suggestions buttons */
+
+.suggestions {
+  padding: 5px;
+  border-radius: 10px;
+  background: #0000009a;
+  box-shadow: 2px 5px 5px 1px #000000;
+  margin-left: 2.2em;
+  margin-top: 0.5em;
+  max-width: 60%;
+  min-width: 25%;
+}
+
+.menuTitle {
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.menu {
+  padding: 5px;
+}
+
+.menuChips {
+  display: block;
+  background: #4d6061;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.menuChips:hover {
+  background: #000000;
+  color: #4d6061;
+  font-weight: bold;
+}
+
+/*css for dropDown messages*/
+
+.dropDownMsg {
+  float: left;
+  margin-top: 5px;
+  background: white;
+  color: black;
+  box-shadow: 2px 3px 9px 0px #9a82842e;
+  margin-left: 0.5em;
+  padding: 10px;
+  border-radius: 1.5em;
+  max-width: 60%;
+  min-width: 25%;
+  font-size: 13px;
+  word-wrap: break-word;
+}
+
+.dropDownMsg > select {
+  border: 0px solid #f2f2f2;
+}
+
+/* css for quick replies */
+
+.quickReplies {
+  padding: 5px;
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  transition: all 0.2s;
+  transform: scale(0.98);
+  will-change: transform;
+  user-select: none;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+
+.quickReplies::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.quickReplies.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+}
+
+.chip {
+  background-color: white;
+  border: 1px solid#4d6061;
+  color: #4d6061;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.chip:hover {
+  background-color: #4d6061;
+  color: white;
+}
+
+/* css for image card */
+
+.imgcard {
+  margin-top: 0.5em;
+  object-fit:contain;
+  width: 80%;
+  height: 50%;
+  border-radius: 10px;
+}
+
+/* css for collapsible */
+
+.collapsible {
+  margin-top: 10px;
+  margin-left: 2.5em;
+  max-width: 70%;
+  min-width: 25%;
+  font-size: 13px;
+  word-wrap: break-word;
+  border-radius: 5px;
+  background: white;
+}
+
+.collapsible-body {
+  padding: 15px;
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
+}
+
+.collapsible-header {
+  font-weight: bold;
+  color: #4d6061;
+}
+
+ul.collapsible > li:first-child .collapsible-header {
+  border-radius: 20px 20px 0px 0px;
+}
+
+ul.collapsible > li:last-child .collapsible-header {
+  color: #4d6061;
+  border-radius: 0px 0px 20px 20px;
+}
+
+ul.collapsible > li:last-child .collapsible-body {
+  border-bottom: none;
+  color: #000000;
+}
+
+.collapsible-header {
+  padding: 10px;
+}
+
+/* css for botTyping */
+
+.botTyping {
+  float: left;
+  margin-top: 5px;
+  background: #0000009a;
+  color: #4d6061;
+  margin-left: 0.5em;
+  padding: 15px;
+  border-radius: 5px 20px 20px 20px;
+  max-width: 60%;
+  min-width: 20%;
+  word-wrap: break-word;
+  border-radius: 0px 5px 5px 5px;
+}
+
+.botTyping > div {
+  width: 10px;
+  height: 10px;
+  background-color: #4d6061;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  margin-right: 5px;
+}
+
+.botTyping .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.botTyping .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+video:focus {
+  outline: none;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+  border-radius: 10px;
+  border-style: none;
+}
+
+/* Bot pop-up intro */
+
+.new-tap-target {
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  position: fixed;
+  bottom: 80px; /* Position it above the widget */
+  right: 60px;
+  color: #ffffff;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Fade in */
+}
+
+.new-tap-target.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.new-tap-target-content h5{
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.new-tap-target-content p{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* PDF attachment css */
+
+.pdf_attachment {
+  border: 0.5px solid #00000014;
+  width: 60%;
+  height: 14%; /* Adjust the height automatically */
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 10px; /* Add a bottom margin */
+  box-shadow: 0px 0px 0px 0px #4d6061;
+  background: #0000009a;
+  font-weight: 100;
+}
+
+.pdf_icon {
+  height: 100%;
+  font-size: 50px;
+  padding: 7% !important;
+  background-color: #000000;
+  color: white;
+}
+
+.pdf_link {
+  height: 100%;
+  padding: 5% !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  margin-top: 5px;
+}
+
+.pdf_link a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.pdf_link a:hover{
+  color: #4d6061;
+}
+
+/* General overall design section */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../img/new-wallpaper.png'); /* Replace with your image path */
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 130%; /* Fit image height to viewport */
+  font-family: 'Helvetica', sans-serif;
+  color: white;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+.container {
+  padding: 0px;
+}
+/* End of General overall design section */
+
+/*Typing effect section*/
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2rem;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; /* Makes it circular */
+  margin-left: 8px; /* Adds space between text and cursor */
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/*End of Typing effect section*/
+
+/* Scroll Section */
+.scroll-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 100px; 
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+}
+
+.scroll-item {
+  background-color: #121212;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+  font-size: 1rem;
+}
+
+.scroll-item:hover, .scroll-item.active {
+  box-shadow: 0px 0px 15px #4d6061;
+  border: 1px solid #4d6061;
+  background-color: #000000;
+}
+/* End of Scroll Section */
+
+/*Common for all the sub sections, they come under the same class*/
+.section-content {
+  margin-bottom: 40px; /* Adds space between sections */
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px; /* Adds space after section title */
+}
+/*End of Common for all the sub sections, they come under the same class*/
+
+/* About Me Section */
+.about-content {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  align-items: center;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.8s ease; /* Transition effect */
+}
+
+.about-content:hover {
+  box-shadow: 0 0 15px #4d6061; 
+}
+
+.about-text {
+  width: 90%; /* Adjust width to ensure the text wraps before touching the image */
+}
+
+.about-text h3 {
+  font-size: 1.6rem;
+  line-height: 1.2; 
+  color: white;
+  margin-right: 20px; /* Spacing from the image */
+  margin-bottom: 20px;
+  word-wrap: break-word; /* Ensure text wraps naturally */
+}
+
+.about-text h6 {
+  font-size: 1.3rem; 
+  line-height: 1.2; 
+  color: #4d6061;
+  margin-right: 100px; /* Spacing from the image */
+  word-wrap: break-word; /* Ensure text wraps naturally */
+}
+
+.profile-img {
+  max-width: 300px;
+  border-radius: 15px;
+}
+/* End of About Me Section */
+
+/* Work Experience Section */
+.work-experience-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.work-box {
+  position: relative;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.8s, background-color 0.8s, box-shadow 0.8s ease;
+  width: 70%; /* Rectangular box */
+  height: 200px; /* Fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.work-box-content {
+  display: flex;
+  align-items: center;
+  padding: 10px; /* Add padding around the content */
+  width: 100%;
+}
+
+.company-logo {
+  width: 30%; /* Image occupies 20% */
+  /* height: auto; */
+  margin-right: 20px;
+}
+
+.work-box-text {
+  width: 80%; /* Text takes up 80% of the box */
+}
+
+.work-box-text h3{
+  font-size: 1.6rem;
+  line-height: 1; 
+  color: white;
+  margin-right: 20px; /* Spacing from the image */
+  margin-top: 20px;
+  margin-bottom: 30px;
+  word-wrap: break-word; /* Ensure text wraps naturally */
+}
+.work-box-text h5{
+  font-size: 1.2rem;
+  line-height: 1; 
+  color: #4d6061;
+  margin-right: 20px; /* Spacing from the image */
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Ensure text wraps naturally */
+}
+.work-box-text p{
+  font-size: 1rem;
+  line-height: 1; 
+  color: #4d6061;
+  margin-right: 20px; /* Spacing from the image */
+  /* margin-top: 20px; */
+  word-wrap: break-word; /* Ensure text wraps naturally */
+}
+
+.work-box:hover {
+  background-color: #000000; /* Solid color on hover */
+  box-shadow: 0 0 15px #4d6061; 
+}
+
+.work-box:hover .work-box-content {
+  display: none; /* Hide the image and text on hover */
+}
+
+.read-more-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4d6061;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  display: none; /* Initially hidden */
+}
+
+.work-box:hover .read-more-btn {
+  display: block; /* Show the button on hover */
+}
+
+.read-more-btn:hover {
+  background-color: #222;
+}
+
+/* Modal (Pop-up) Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  overflow-y: hidden;
+}
+
+.modal-content {
+  background-color: #000000;
+  margin: 10% auto; /* Add more length to the modal */
+  padding: 30px; /* More padding for readability */
+  border-radius: 10px;
+  width: 60%; /* Increase the width */
+  color: white;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-content h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 15px; /* Add space after headers */
+  color: #4d6061
+}
+.modal-content h4 {
+  font-size: 1.4rem;
+  margin-bottom: 15px; /* Add space after headers */
+  color: #4d6061
+}
+
+.modal-content p {
+  margin-bottom: 20px; /* Add space between paragraphs */
+  word-wrap: break-word;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* More gap between skill buttons */
+}
+
+.skill-btn {
+  background-color: #4d6061;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+}
+
+/* Responsive Styles for Modal */
+@media (max-width: 768px) {
+  .modal-content {
+      width: 80%;
+  }
+}
+
+/* End of Work Experience Section */
+
+/* Certifications Section */
+.certification-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start; /* Ensure cards align at the start */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+  padding-bottom: 10px; /* Adds space for the scrollbar */
+  -webkit-overflow-scrolling: touch; /* Improves scroll behavior on touch devices */
+}
+.certification-cards::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height */
+}
+
+.certification-cards::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Make scrollbar thumb subtle */
+  border-radius: 10px;
+}
+
+.certification-cards::-webkit-scrollbar-track {
+  background-color: transparent; /* Make scrollbar track transparent */
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  perspective: 1000px;
+  position: relative;
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  border-radius: 20px;
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-front {
+  background-color: #333;
+  overflow: hidden; /* Make sure the image fits in the card without overflow */
+}
+
+.cert-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the entire card front */
+  border-radius: 15px;
+}
+
+.card-back {
+  background-color: #000000;
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.card-back .cert-link-btn {
+  background-color: #4d6061;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.card-back .cert-link-btn:hover {
+  background-color: #222;
+}
+
+.card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .certification-cards {
+      justify-content: center; /* Center the cards on smaller screens */
+  }
+
+  .card {
+      width: 150px; /* Adjust size for smaller screens */
+      height: 200px;
+  }
+}
+
+/* End of Certifications Section */
