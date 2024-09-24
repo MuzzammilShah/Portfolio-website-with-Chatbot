@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: rasa run --enable-api --cors "*" --debug
