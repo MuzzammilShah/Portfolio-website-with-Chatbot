@@ -7,9 +7,9 @@
 
 #### **📢Disclaimer:**
 
-⚠️The site has been designed to best view on either a Laptop or Desktop. And the Chatbot servers has been turned off due to the Memory Limit being exceeded that was provided by the hosting service.
+The site has been designed to best view on either a Laptop or Desktop. And the Chatbot servers has been turned off due to the Memory Limit being exceeded that was provided by the hosting service.
 
-**However, If you wish to see the chatbot's functionality please feel free to contact me. I'd be more than happy to show you a demo😌**
+**However, If you wish to see the chatbot's functionality please feel free to contact me. I'd be more than happy to show you a demo**
 
 #### **⌛Don't have time to connect? No problem, you can view the recordings I've added to see how the site functions!**
 - [Wesbite UI 🌐](https://drive.google.com/file/d/174t4TTmsRQvDKpEot5VHwR3Wo8_ioB2_/view?usp=sharing)
