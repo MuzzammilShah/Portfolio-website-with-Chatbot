@@ -1,5 +1,13 @@
 # **🚧THIS REPO README IS CURRENTLY UNDER RENOVATION. WILL BE UPDATED SOON!🚧**
 
+## Project Demo
+
+<video src="videos/Website_UI.mp4" controls="controls" style="max-width: 100%;"></video>
+
+&nbsp;
+
+<video src="videos/Chatbot_UI.mp4" controls="controls" style="max-width: 100%;"></video>
+
 &nbsp;
 
 ### **🔗Feel free to view the website on the hosted link!**
