@@ -1,8 +1,8 @@
-# Instructions
+## Instructions
 
 *Make sure you have set up the virtual environment in your project, Have installed Rasa and Flask (Check requirements.txt)*
 
-## Integration
+### Implementation
 
 - All the necessary setup have already been implemented for you in the project. Once you have developed your bot and you are ready to integrate the bot with the UI, you can start the Rasa server using the below commands.
 
@@ -23,3 +23,17 @@ Note: If you are facing any issues here, you can run both those commands again b
     flask run
     ```
 If this is run successfully, you will see that your site is `running on http://127.0.0.1:5000`, Ctrl+Click on the link to view your site!
+
+-----
+
+### Versions used:
+
+```
+Python 3.10.0
+```
+
+```
+Rasa Version      :         3.6.20
+Minimum Compatible Version: 3.5.0
+Rasa SDK Version  :         3.6.2
+```
