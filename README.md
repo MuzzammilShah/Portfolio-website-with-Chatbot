@@ -20,6 +20,6 @@ The site has been designed to best view on either a Laptop or Desktop. And the C
 ### FOR DEVELOPERS:
 
 
-If you wish to host your own site, feel free to clone this repository and follow the instructions in the [instructions.md](instructions.md) file.
+🧰If you wish to host your own site, feel free to clone this repository and follow the instructions in the [instructions.md](instructions.md) file.
 
 Credits: The chatbot widget is an inspiration from Jitesh Gaikwad's first version of his project - Chatbot Widget. Feel free to show him support as well :)
