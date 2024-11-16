@@ -4,9 +4,9 @@
 
 ### Implementation
 
-- All the necessary setup have already been implemented for you in the project. Once you have developed your bot and you are ready to integrate the bot with the UI, you can start the Rasa server using the below commands.
+All the necessary setup have already been implemented for you in the project. Once you have developed your bot and you are ready to integrate the bot with the UI, you can start the Rasa server using the below commands.
 
-Open one terminal and run the command:
+- Open one terminal and run the command:
   ```
   rasa run -m models --enable-api --cors "*"
   ```
